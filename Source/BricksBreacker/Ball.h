@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "BallBound.h"
 #include "Ball.generated.h"
 
 class UProjectileMovementComponent;
