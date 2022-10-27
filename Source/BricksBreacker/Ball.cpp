@@ -18,7 +18,7 @@ ABall::ABall()
 	SM_Ball->SetEnableGravity(false);
 	SM_Ball->SetConstraintMode(EDOFMode::XZPlane);
 	SM_Ball->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
-	SM_Ball->SetCollisionProfileName(TEXT("PhysicActor"));
+	SM_Ball->SetCollisionProfileName(TEXT("PhysicsActor"));//SE CAMBIO LA "S" DENTRO DEL TEXT.
 
 	ProjectileMovement = CreateDefaultSubobject<UProjectileMovementComponent>(TEXT("Projectile Movement"));
 

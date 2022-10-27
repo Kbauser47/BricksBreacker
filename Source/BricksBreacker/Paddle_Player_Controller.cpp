@@ -14,14 +14,13 @@ APaddle_Player_Controller::APaddle_Player_Controller()
 
 void APaddle_Player_Controller::BeginPlay()
 {
+	SpawnNewBall();
 
 	TArray<AActor*>CameraActors;
 	UGameplayStatics::GetAllActorsOfClass(GetWorld(), ACameraActor::StaticClass(), CameraActors);
 
 	FViewTargetTransitionParams Params;
 	SetViewTarget(CameraActors[0], Params);
-
-	SpawnNewBall();
 
 }
 
@@ -33,7 +32,7 @@ void APaddle_Player_Controller::SetupInputComponent()
 
 
 	InputComponent->BindAxis("MoveHorizontal", this, &APaddle_Player_Controller::MoveHorizontal);
-	InputComponent->BindAction("Lanch", IE_Pressed, this, &APaddle_Player_Controller::Lanch);
+	InputComponent->BindAction("Launch", IE_Pressed, this, &APaddle_Player_Controller::Launch);//SE MOVIO EL LAUNCH PARA QUE TAL
 
 
 }
@@ -50,7 +49,7 @@ void APaddle_Player_Controller::MoveHorizontal(float AxisValue)
 
 }
 
-void APaddle_Player_Controller::Lanch()
+void APaddle_Player_Controller::Launch()
 {
 
 	MyBall->Launch();
@@ -65,7 +64,7 @@ void APaddle_Player_Controller::SpawnNewBall()
 	}
 	if (BallObj) {
 
-		MyBall = GetWorld()->SpawnActor<ABall>(BallObj, SpawnLocation, SpawnRotator, SpawnInfo);
+		MyBall = GetWorld()->SpawnActor<ABall>(BallObj, SpawnLocation, SpawnRotation, SpawnInfo);
 
 	}
 }

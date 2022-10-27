@@ -23,13 +23,13 @@ protected:
 	virtual void BeginPlay() override;
 	void MoveHorizontal(float AxisValue);
 
-	void Lanch();
+	void Launch();//SE CAMBIO TAMBIEN EL LAUNCH.
 	UPROPERTY(EditAnywhere)
 		TSubclassOf<ABall>BallObj;
 
 	ABall* MyBall;
 	FVector SpawnLocation = FVector(10.0f, 0.0f, 40.0f);
-	FRotator SpawnRotator = FRotator(0.0f, 0.0f, 0.0f);
+	FRotator SpawnRotation = FRotator(0.0f, 0.0f, 0.0f);//SE CAMBIO LA ROTATOR POR ROTATION.
 	FActorSpawnParameters SpawnInfo;
 		
 public:
