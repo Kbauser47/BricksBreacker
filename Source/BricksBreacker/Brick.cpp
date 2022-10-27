@@ -38,7 +38,7 @@ void ABrick::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherAc
 		ABall* MyBall = Cast<ABall>(OtherActor);
 
 		FVector BallVelocity = MyBall->GetVelocity();
-		BallVelocity *= (SpeedModifierOnBounce - 1.0f);
+		BallVelocity *= (SpeedModifierOnBounce - 2.0f); // de 1.0f --> 2.0f
 
 		MyBall->GetBall()->SetPhysicsLinearVelocity(BallVelocity, true);
 
