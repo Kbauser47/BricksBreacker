@@ -68,3 +68,15 @@ void APaddle_Player_Controller::SpawnNewBall()
 
 	}
 }
+/*void APaddle_Player_Controller::SpawnNewBall1()
+{
+
+	if (!MyBall) {
+		MyBall = nullptr;
+	}
+	if (BallObj) {
+
+		MyBall = GetWorld()->SpawnActor<ABall>(BallObj, SpawnLocacion, SpawnRotacion, SpawnInfor);
+
+	}
+}*/

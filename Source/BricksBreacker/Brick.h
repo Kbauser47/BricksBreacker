@@ -28,10 +28,18 @@ protected:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
 		UBoxComponent* BoxCollision;
 
-	float SpeedModifierOnBounce = 1.2f;// de 1.1f --> 1.2f 
+	float SpeedModifierOnBounce = 1.1f;// de 1.1f --> 1.2f 
 
 	UFUNCTION()
 		void OnOverlapBegin(class UPrimitiveComponent* OverlappedComp, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndexType, bool bFromSweet, const FHitResult& SweepResult);
+	
+	/*UPROPERTY(EditAnywhere)
+		TSubclassOf<ABrick>BrickObj;
+	
+	ABrick* MyBrick;
+	FVector SpawnLocacion = FVector(10.0f, 0.0f, 70.0f);
+	FRotator SpawnRotacion = FRotator(0.0f, 0.0f, 0.0f);//SE CAMBIO LA ROTATOR POR ROTATION.
+	FActorSpawnParameters SpawnInfor;*/
 	
 	void DestroyBrick();
 

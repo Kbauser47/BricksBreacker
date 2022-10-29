@@ -35,6 +35,9 @@ void ABallBound::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* Oth
 		OtherActor->Destroy();
 
 		PlayerControllerREF->SpawnNewBall();
+
+	//	PlayerControllerREF->SpawnNewBall1();
+	
 	}
 
 }

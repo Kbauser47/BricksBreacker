@@ -32,7 +32,15 @@ protected:
 	FRotator SpawnRotation = FRotator(0.0f, 0.0f, 0.0f);//SE CAMBIO LA ROTATOR POR ROTATION.
 	FActorSpawnParameters SpawnInfo;
 		
+
+	/*FVector SpawnLocacion = FVector(10.0f, 0.0f, 10.0f);
+	FRotator SpawnRotacion = FRotator(0.0f, 0.0f, 0.0f);//SE CAMBIO LA ROTATOR POR ROTATION.
+	FActorSpawnParameters SpawnInfor;*/
+
 public:
 	void SpawnNewBall();
+
+	//void SpawnNewBall1();
+
 };
 

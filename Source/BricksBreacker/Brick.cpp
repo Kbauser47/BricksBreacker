@@ -38,7 +38,7 @@ void ABrick::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherAc
 		ABall* MyBall = Cast<ABall>(OtherActor);
 
 		FVector BallVelocity = MyBall->GetVelocity();
-		BallVelocity *= (SpeedModifierOnBounce - 2.0f); // de 1.0f --> 2.0f
+		BallVelocity *= (SpeedModifierOnBounce - 1.0f); // de 1.0f --> 2.0f
 
 		MyBall->GetBall()->SetPhysicsLinearVelocity(BallVelocity, true);
 
@@ -53,6 +53,13 @@ void ABrick::DestroyBrick()
 {
 
 	this->Destroy();
+	//UPROPERTY(EditAnywhere)
+		//TSubclassOf<ABrick>BrickObj;
+	//ABrick* MyBrick;
+	//FVector SpawnLocacion = FVector(10.0f, 0.0f, 70.0f);
+	//FRotator SpawnRotacion = FRotator(0.0f, 0.0f, 0.0f);//SE CAMBIO LA ROTATOR POR ROTATION.
+	//FActorSpawnParameters SpawnInfor;
+	//MyBrick = GetWorld()->SpawnActor<ABrick>(BrickObj, SpawnLocacion, SpawnRotacion, SpawnInfor);
 
 }
 
